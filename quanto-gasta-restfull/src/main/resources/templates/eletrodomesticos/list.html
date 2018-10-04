@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<title>Eletrodomesticos</title>
+</head>
+<body>
+	<h1 layout:fragment="header">Lista de eletrodomesticos</h1>
+	<div layout:fragment="content" class="container">
+			<a href="form.html" th:href="@{/eletrodomesticos/novo}">Novo eletrodomestico</a>
+		<div class="alert alert-success" th:if="${globalMessage}"
+			th:text="${globalMessage}">mensagem</div>			
+		<table class="table table-bordered table-striped">
+			<thead> 
+				<tr>
+					<td>ID</td>
+					<td>Nome</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:if="${eletrodomesticos.empty}">
+					<td colspan="3">Sem eletrodomesticos</td>
+				</tr>
+				<tr th:each="eletrodomestico : ${eletrodomesticos}">
+					<td th:text="${eletrodomestico.id}">1</td>
+					<td><a href="view.html" th:href="@{'/eletrodomesticos/' + ${eletrodomestico.id}}" th:text="${eletrodomestico.nome}"> nome </a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
