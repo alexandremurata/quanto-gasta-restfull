@@ -16,6 +16,9 @@
 				<tr>
 					<td>ID</td>
 					<td>Nome</td>
+					<td>Potencia</td>
+					<td>Quantidade Hora</td>
+					<td>Consumo Por Hora</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -25,6 +28,9 @@
 				<tr th:each="eletrodomestico : ${eletrodomesticos}">
 					<td th:text="${eletrodomestico.id}">1</td>
 					<td><a href="view.html" th:href="@{'/eletrodomesticos/' + ${eletrodomestico.id}}" th:text="${eletrodomestico.nome}"> nome </a></td>
+					<td th:text="${eletrodomestico.potencia}">potencia</td>
+					<td th:text="${eletrodomestico.qtdeHoras}">Quantidade Horas</td>
+					<td th:text="${eletrodomestico.consumoPorHora}">Consumo Por Hora</td>
 				</tr>
 			</tbody>
 		</table>

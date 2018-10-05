@@ -24,11 +24,20 @@ public class Tarifa {
 	
 	@NotNull
 	private Double valor;
+	
+	public Tarifa () {
+		super();
+	}
 
 	public Tarifa(final Long id, final Double valor) {
 		super();
 		this.id = id;
 		this.valor = valor;
 	}
+	
+	@Override
+		public String toString() {
+			return "Tarifa [ID = " + id + " VALOR = " + valor + " ]";
+		}
 	
 }

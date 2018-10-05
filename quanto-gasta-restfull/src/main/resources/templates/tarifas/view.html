@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+ <title>Tarifa</title>
+</head>
+<body>
+	<h1 layout:fragment="header">Tarifa</h1>
+	<div layout:fragment="content" class="well">
+		<div class="alert alert-success" th:if="${globalMessage}"
+			th:text="${globalMessage}">tarifa gravada com sucesso</div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td id="id" th:text="${tarifa.id}">123</td>
+					<td id="valor" th:text="${tarifa.valor}">Valor...</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="pull-left">
+			<a href="form.html" th:href="@{'/tarifas/alterar/' + ${tarifa.id}}">alterar</a>
+			| <a href="tarifas" th:href="@{'/tarifas/remover/' + ${tarifa.id}}">remover</a>
+		    | <a th:href="@{/tarifas/}" href="list.html">voltar</a>
+		</div>
+	</div>
+</body>
+</html>

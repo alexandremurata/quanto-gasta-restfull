@@ -40,6 +40,8 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario")
     @Cascade(CascadeType.ALL)
 	private List<Eletrodomestico> eletrodomesticos;
+    
+    public Usuario() {}
 
 	/**
 	 * Método responsável por adicionar um {@link Eletrodomestico} à lista
