@@ -56,6 +56,7 @@ public class Eletrodomestico {
 		this.nome = nome;
 		this.potencia = potencia;
 		this.qtdeHoras = qtdeHoras;
+		this.consumoPorHora = 0D;
 	}
 
 	/**

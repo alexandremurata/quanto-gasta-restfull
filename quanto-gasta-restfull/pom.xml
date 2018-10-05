@@ -9,8 +9,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>springboot-greendogdelivery</name>
-	<description>greendog delivery</description>
+	<name>springboot-quantogasta</name>
+	<description>quanto-gasta</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

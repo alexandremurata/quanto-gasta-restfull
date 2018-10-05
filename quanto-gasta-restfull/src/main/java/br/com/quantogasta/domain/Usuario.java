@@ -1,14 +1,10 @@
 package br.com.quantogasta.domain;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,6 +13,9 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Classe que representa {@link Usuario}
@@ -34,11 +33,11 @@ public class Usuario {
     @NotNull
 	private String nome;
     
-    @OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "usuario")
     @Cascade(CascadeType.ALL)
 	private List<ConsumoMensal> consumoMensalLista;
     
-    @OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "usuario")
     @Cascade(CascadeType.ALL)
 	private List<Eletrodomestico> eletrodomesticos;
 
