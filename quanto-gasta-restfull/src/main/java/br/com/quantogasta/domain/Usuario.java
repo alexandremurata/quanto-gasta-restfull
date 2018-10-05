@@ -42,6 +42,12 @@ public class Usuario {
 	private List<Eletrodomestico> eletrodomesticos;
     
     public Usuario() {}
+    
+    public Usuario(final String nome, final List<ConsumoMensal> consumoMensalLista, final List<Eletrodomestico> eletrodomesticos) {
+    	this.nome = nome;
+    	this.consumoMensalLista = new ArrayList<ConsumoMensal>();
+    	this.eletrodomesticos = new ArrayList<Eletrodomestico>();
+    }
 
 	/**
 	 * Método responsável por adicionar um {@link Eletrodomestico} à lista

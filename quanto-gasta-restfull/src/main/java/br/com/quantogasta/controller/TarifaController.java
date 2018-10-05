@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import br.com.quantogasta.domain.Item;
 import br.com.quantogasta.domain.Tarifa;
 import br.com.quantogasta.repository.TarifaRepository;
 

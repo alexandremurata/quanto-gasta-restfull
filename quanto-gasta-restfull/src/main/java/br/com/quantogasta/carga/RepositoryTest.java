@@ -5,9 +5,10 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import br.com.quantogasta.domain.Eletrodomestico;
-import br.com.quantogasta.domain.Tarifa;
+import br.com.quantogasta.domain.Usuario;
 import br.com.quantogasta.repository.EletrodomesticoRepository;
 import br.com.quantogasta.repository.TarifaRepository;
+import br.com.quantogasta.repository.UsuarioRepository;
 
 @Component
 public class RepositoryTest 
@@ -23,6 +24,9 @@ implements ApplicationRunner
 	@Autowired
 	private TarifaRepository tarifaRepository;
 	
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+	
     @Override
     public void run(ApplicationArguments applicationArguments) throws Exception {
     	
@@ -33,8 +37,12 @@ implements ApplicationRunner
 //    	Tarifa tarifa1 = new Tarifa(ID_TARIFA1, 5.0);
 //    	tarifaRepository.saveAndFlush(tarifa1);
     	
+    	Usuario usuario1 = new Usuario("Gilberto", null, null);
+    	usuarioRepository.saveAndFlush(usuario1);
+    	
     	System.out.println(">>> Eletrodomestico 1 - Televisão : "+ eletro1);
 //    	System.out.println(">>> Tarifa 1 - T1 : "+ tarifa1);
+    	System.out.println(">>> Usuario 1 - Gilberto : "+ usuario1);
     	
     	
 		
