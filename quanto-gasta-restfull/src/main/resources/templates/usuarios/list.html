@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="layout">
+<head>
+<title>Usuarios</title>
+</head>
+<body>
+	<h1 layout:fragment="header">Lista de usuarios</h1>
+	<div layout:fragment="content" class="container">
+			<a href="form.html" th:href="@{/usuarios/novo}">Novo usuario</a>
+		<div class="alert alert-success" th:if="${globalMessage}"
+			th:text="${globalMessage}">mensagem</div>			
+		<table class="table table-bordered table-striped">
+			<thead> 
+				<tr>
+					<td>ID</td>
+					<td>Nome</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:if="${usuarios.empty}">
+					<td colspan="3">Sem usuarios</td>
+				</tr>
+				<tr th:each="usuario : ${usuarios}">
+					<td th:text="${usuario.id}">1</td>
+					<td><a href="view.html" th:href="@{'/usuarios/' + ${usuario.id}}" th:text="${usuario.nome}"> nome </a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
