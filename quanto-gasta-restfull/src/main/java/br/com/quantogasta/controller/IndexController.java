@@ -17,11 +17,6 @@ public class IndexController {
 		return "index";
 	}
 
-	@GetMapping("/ambiente")
-	public String ambiente() {
-		return "ambiente";
-	}
-
 	@GetMapping("properties")
 	@ResponseBody
 	Properties properties() {
