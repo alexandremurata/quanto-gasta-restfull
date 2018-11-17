@@ -28,11 +28,29 @@ public class TarifaRepository {
 	}
 
 	/**
-	 * Método responsável por inserir no banco um {@link Tarifa}
+	 * Método responsável por inserir no banco uma {@link Tarifa}
 	 * 
 	 * @param tarifa to be saved
 	 */
 	public void salvar(final Tarifa tarifa) {
 		container.store(tarifa);
+	}
+	
+	/**
+	 * Método responsável por deletar do banco uma {@link Tarifa}
+	 * @param id	tarifa's id to be deleted
+	 */
+	public void delete(final Long id) {
+		Query query = container.query();
+		query.constrain(Tarifa.class);
+		List<Tarifa> tarifas = query.execute();
+		
+		for (Tarifa tarifa : tarifas) {
+			if(tarifa.getId().equals(id)) {
+				container.delete(tarifa);
+				container.commit();
+				break;
+			}
+		}
 	}
 }
