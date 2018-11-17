@@ -13,22 +13,22 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.quantogasta.domain.Tarifa;
-import br.com.quantogasta.repository.TarifaRepository;
+import br.com.quantogasta.service.TarifaService;
 
 @Controller
 @RequestMapping("/tarifas")
 public class TarifaController {
 
-	private final TarifaRepository tarifaRepository;
+	private final TarifaService tarifaService;
 	private final String TARIFA_URI = "tarifas/";
 	
-	public TarifaController(final TarifaRepository tarifaRepository) {
-		this.tarifaRepository = tarifaRepository;
+	public TarifaController(final TarifaService tarifaService) {
+		this.tarifaService = tarifaService;
 	}
 	
 	@GetMapping("/")
 	public ModelAndView list() {
-		Iterable<Tarifa> tarifas = this.tarifaRepository.findAll();
+		Iterable<Tarifa> tarifas = this.tarifaService.findAll();
 		return new ModelAndView(TARIFA_URI + "list","tarifas",tarifas);
 	}
 	

@@ -1,12 +1,27 @@
 package br.com.quantogasta.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import com.db4o.Db4oEmbedded;
+import com.db4o.ObjectContainer;
 
 import br.com.quantogasta.domain.Eletrodomestico;
 
-@Repository
-public interface EletrodomesticoRepository extends JpaRepository<Eletrodomestico, Long> {
 
-	Eletrodomestico findByNome(final String nome);
+public class EletrodomesticoRepository {
+
+	private final ObjectContainer container;
+
+	public EletrodomesticoRepository() {
+		container = Db4oEmbedded.openFile("bd/eletrodomesticos.db4o");
+	}
+	
+	/**
+	 * Método responsável por inserir no banco um  {@link Eletrodomestico}
+	 * @param eletrodomestico
+	 */
+	public void salvar(final Eletrodomestico eletrodomestico) {
+		container.store(eletrodomestico);
+	}
+	
+	
+	
 }

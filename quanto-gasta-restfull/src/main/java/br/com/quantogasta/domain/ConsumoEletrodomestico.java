@@ -1,7 +1,5 @@
 package br.com.quantogasta.domain;
 
-import javax.persistence.Entity;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,13 +11,15 @@ import lombok.Setter;
  * 
  * */
 
-@Entity
+
 @Getter
 @Setter
 public class ConsumoEletrodomestico {
 
+	private Long id;
 	private String mesAno;
 	private Eletrodomestico eletrodomestico;
 	private Float consumoWatt;
 	private Float consumoValor;
+	private Float tempoUso;
 }
