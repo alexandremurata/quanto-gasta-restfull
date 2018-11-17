@@ -65,6 +65,15 @@
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
+		
+		<dependency>
+			<groupId>deb4o</groupId>
+			<artifactId>deb4o</artifactId>
+			<scope>system</scope>
+			<version>8.0.249.16098</version>
+			<systemPath>${basedir}/lib/db4o-8.0.249.16098-all-java5.jar</systemPath>
+		</dependency>
+		
 
 	</dependencies>
 
