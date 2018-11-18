@@ -1,4 +1,9 @@
-package br.com.quantogasta.domain;
+package br.com.quantogasta.rules;
+
+import br.com.quantogasta.rules.tarifa.Tarifa;
+import br.com.quantogasta.rules.tarifa.TarifaBandeiraAmarela;
+import br.com.quantogasta.rules.tarifa.TarifaBandeiraVerde;
+import br.com.quantogasta.rules.tarifa.TarifaBandeiraVermelha;
 
 public class RegraTarifacao {
 	

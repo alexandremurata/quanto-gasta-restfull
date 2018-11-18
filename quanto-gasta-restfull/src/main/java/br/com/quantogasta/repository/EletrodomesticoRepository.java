@@ -7,7 +7,6 @@ import com.db4o.ObjectContainer;
 import com.db4o.query.Query;
 
 import br.com.quantogasta.domain.Eletrodomestico;
-import br.com.quantogasta.domain.Tarifa;
 
 
 public class EletrodomesticoRepository {

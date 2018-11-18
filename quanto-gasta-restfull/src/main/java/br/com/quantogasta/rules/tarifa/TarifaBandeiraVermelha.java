@@ -1,4 +1,4 @@
-package br.com.quantogasta.domain;
+package br.com.quantogasta.rules.tarifa;
 
 public class TarifaBandeiraVermelha implements Tarifa {
 
