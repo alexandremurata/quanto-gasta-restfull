@@ -9,12 +9,6 @@ import br.com.quantogasta.service.EletrodomesticoService;
 @RequestMapping("/eletrodomesticos")
 public class EletrodomesticoController {
 	
-	private EletrodomesticoService eletrodomesticoService;
-
-	public EletrodomesticoController() {
-		eletrodomesticoService = new EletrodomesticoService();
-	}
-	
-	
+	private EletrodomesticoService service = new EletrodomesticoService();
 
 }

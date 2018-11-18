@@ -15,20 +15,16 @@ import br.com.quantogasta.service.TarifaService;
 @RequestMapping("/tarifas")
 public class TarifaController {
 
-	private TarifaService tarifaService;
-	
-	public TarifaController() {
-		tarifaService = new TarifaService();
-	}
+	private TarifaService service = new TarifaService() ;
 	
 	@GetMapping("/")
 	public List<Tarifa> list() {
-		return this.tarifaService.findAll();
+		return service.findAll();
 	}
 	
 	@PostMapping
 	public void adicionarTarifa(@RequestBody Tarifa tarifa) {
-		tarifaService.save(tarifa);
+		service.save(tarifa);
 	}
 	
 	

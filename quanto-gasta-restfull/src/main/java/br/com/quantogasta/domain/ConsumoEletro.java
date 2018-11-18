@@ -14,7 +14,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ConsumoEletrodomestico {
+public class ConsumoEletro {
 
 	private Long id;
 	private String mesAno;
