@@ -15,7 +15,7 @@ public class ContaMensal {
 	private Double totalKWH;
 	private String bandeira;
 	private Tarifa tarifa;
-	private List<ConsumoEletro> consumoEletro;
+	private List<ConsumoEletro> consumoEletros;
 	private String statusContaMensal;
 	
 	

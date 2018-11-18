@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.quantogasta.domain.Eletrodomestico;
-import br.com.quantogasta.domain.Tarifa;
 import br.com.quantogasta.service.EletrodomesticoService;
 
 @RestController

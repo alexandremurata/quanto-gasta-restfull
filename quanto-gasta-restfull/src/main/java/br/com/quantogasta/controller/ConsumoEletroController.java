@@ -23,7 +23,7 @@ public class ConsumoEletroController {
 	}
 	
 	@PostMapping
-	public void adicionarTarifa(@RequestBody ConsumoEletro consumoEletro) {
+	public void adicionarConsumoEletro(@RequestBody ConsumoEletro consumoEletro) {
 		service.save(consumoEletro);
 	}
 	
