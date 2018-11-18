@@ -11,7 +11,6 @@ import lombok.Setter;
  * 
  * */
 
-
 @Getter
 @Setter
 public class ConsumoEletro {
@@ -24,6 +23,8 @@ public class ConsumoEletro {
 	private Double tempoUsoDiario;
 	private Integer quantidade;
 	
+	private RegraTarifacao regraTarifacao;
+
 	public ConsumoEletro(Long id, String mesAno, Eletrodomestico eletrodomestico, Double consumoWatt,
 			Double consumoValor, Double tempoUsoDiario, Integer quantidade) {
 		this.id = id;
@@ -38,6 +39,6 @@ public class ConsumoEletro {
 	public Double calcularConsumoDiario() {
 		return (quantidade * eletrodomestico.getPotencia() * tempoUsoDiario) / 1000;
 	}
-	
+
 
 }

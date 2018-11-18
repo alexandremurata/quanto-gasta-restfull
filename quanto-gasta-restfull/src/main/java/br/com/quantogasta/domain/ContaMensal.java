@@ -18,23 +18,12 @@ public class ContaMensal {
 	private List<ConsumoEletro> consumoEletros;
 	private String statusContaMensal;
 	
-	
-	
-	/**public Double calcularConsumoMensal(final Tarifa tarifa, final Double totalKWH, final String bandeira) {
-		if (ConstantUtils.VERMELHO.equalsIgnoreCase(bandeira)) {
-			return totalKWH * tarifa.getValor() + (totalKWH / 100) * 3;
-		}
-		if (ConstantUtils.AMARELO.equalsIgnoreCase(bandeira)) {
-			return totalKWH * tarifa.getValor() + (totalKWH / 100) * 2;
-		}
-
-		return totalKWH * tarifa.getValor();
+	public ContaMensal(final Double totalValor, final List<ConsumoEletro> consumoEletros) {
+		this.totalValor = totalValor;
+		this.consumoEletros = consumoEletros;
 	}
-
-	public void registarConsumoPorHora(final Double consumoPorHora) {
-		if(Objects.isNull(consumosPorHora)) {
-			consumosPorHora = new ArrayList<Double>();
-		}
-		consumosPorHora.add(consumoPorHora);
-	}**/
+	
+	/*private static Double calcularConsumoTotal(List<ConsumoEletro> consumoEletros) {
+        return consumoEletros.stream().mapToLong(ConsumoEletro::calcularConsumoDiario()).sum();
+    } */
 }
