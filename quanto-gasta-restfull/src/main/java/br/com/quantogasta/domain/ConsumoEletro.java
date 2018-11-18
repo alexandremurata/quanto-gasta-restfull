@@ -19,7 +19,7 @@ public class ConsumoEletro {
 	private Long id;
 	private String mesAno;
 	private Eletrodomestico eletrodomestico;
-	private Float consumoWatt;
-	private Float consumoValor;
-	private Float tempoUso;
+	private Double consumoWatt;
+	private Double consumoValor;
+	private Double tempoUso;
 }

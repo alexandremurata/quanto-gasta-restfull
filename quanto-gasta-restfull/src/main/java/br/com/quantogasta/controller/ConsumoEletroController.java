@@ -27,9 +27,8 @@ public class ConsumoEletroController {
 		service.save(consumoEletro);
 	}
 	
+	
 	// Calcular Consumo Diario
 	// Calcular Custo Diario
 	
-	// Calcular Consumo Mensal
-	// Calcular Custo Mensal
 }
