@@ -13,7 +13,7 @@ public class ConsumoEletroRepository {
 	private final ObjectContainer container;
 	
 	public ConsumoEletroRepository() {
-		container = Db4oEmbedded.openFile("bd/consumoEletros.db4o");
+		container = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/consumoEletros.db4o");
 	}
 	
 	/**

@@ -14,7 +14,7 @@ public class EletrodomesticoRepository {
 	private final ObjectContainer container;
 
 	public EletrodomesticoRepository() {
-		container = Db4oEmbedded.openFile("bd/eletrodomesticos.db4o");
+		container = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/eletrodomesticos.db4o");
 	}
 	
 	/**

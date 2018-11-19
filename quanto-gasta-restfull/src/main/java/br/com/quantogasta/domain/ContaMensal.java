@@ -13,9 +13,7 @@ public class ContaMensal {
 	private String mesAno;
 	private Double totalValor;
 	private Double totalKWH;
-	private String bandeira;
 	private List<ConsumoEletro> consumoEletros;
-	private String statusContaMensal;
 	
 	public ContaMensal(final Double totalValor, final List<ConsumoEletro> consumoEletros) {
 		this.totalValor = totalValor;
@@ -25,4 +23,14 @@ public class ContaMensal {
 	/*private static Double calcularConsumoTotal(List<ConsumoEletro> consumoEletros) {
         return consumoEletros.stream().mapToLong(ConsumoEletro::calcularConsumoDiario()).sum();
     } */
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		return sb.append("ID: ").append(id)
+		.append("MES_ANO: ").append(mesAno)
+		.append("TOTAL_VALOR: ").append(totalValor)
+		.append("TOTAL_KWH: ").append(totalKWH)
+		.append("CONSUMO ELETRODOMESTICOS: ").append(consumoEletros).toString();
+	}
 }

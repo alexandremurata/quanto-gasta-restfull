@@ -13,7 +13,7 @@ public class ContaMensalRepository {
 	private final ObjectContainer container;
 	
 	public ContaMensalRepository() {
-		container = Db4oEmbedded.openFile("bd/contasMensal.db4o");
+		container = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/contasMensal.db4o");
 	}
 	
 	/**
