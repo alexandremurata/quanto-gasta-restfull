@@ -17,14 +17,16 @@ public class EletrodomesticoController {
 	
 	private EletrodomesticoService service = new EletrodomesticoService();
 	
-	@GetMapping("/")
+	@GetMapping
 	public List<Eletrodomestico> list() {
 		return service.findAll();
 	}
 	
 	@PostMapping
-	public void adicionarTarifa(@RequestBody Eletrodomestico eletrodomestico) {
+	public void adicionarEletrodomestico(@RequestBody Eletrodomestico eletrodomestico) {
 		service.save(eletrodomestico);
 	}
+	
+	
 
 }

@@ -15,6 +15,9 @@ public class EletrodomesticoRepository {
 
 	public EletrodomesticoRepository() {
 		container = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(), "bd/eletrodomesticos.db4o");
+		
+		// Just to test
+		salvar(new Eletrodomestico(1001L, "Televisão", 90.0));
 	}
 	
 	/**

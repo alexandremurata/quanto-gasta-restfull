@@ -28,7 +28,4 @@ public class ConsumoEletroController {
 	}
 	
 	
-	// Calcular Consumo Diario
-	// Calcular Custo Diario
-	
 }
