@@ -1,0 +1,99 @@
+%overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 11;
+}
+
+.modal {
+    overflow: auto;
+    @extend %overlay;
+    display: none;
+    
+    .modal-box {
+        position: relative;
+        width: 90%;
+        max-width: 580px;
+        margin: 100px auto;
+        background-color: #FFF;
+        padding: 0 24px;
+        animation: modalbox .3s ease-out;
+        border-radius: 6px;
+    }
+    
+    .modal-header {
+        padding: 24px 0 10px;
+        
+        .modal-header-title {
+            font-size: 24px;
+            color: #0c304a;
+        }
+        
+        .closeModal{
+            font-size: 22px;
+            float: right;
+        }
+    }
+    
+    .modal-body {
+        font-size: 16px;
+        line-height: 22px;
+        
+        &-form {
+            margin: 1cm 0;
+            display: flex;
+            flex-direction: column;
+            
+            span {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            
+            input {
+                margin-bottom: 20px;
+                width: 70%;
+                padding: 7px;
+                border-radius: 20px;
+                border-color: black;
+                border-width: 1px;
+            }
+
+            select {
+                margin-bottom: 20px;
+                width: 70%;
+                padding: 7px;
+                border-radius: 20px;
+                border-color: black;
+                border-width: 1px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    
+    .modal-footer {
+        text-align: right;
+        padding: 24px 0;
+        
+        .btn {
+            &:last-child {
+                margin-left: 12px;
+            }
+        }
+    }
+    
+    .formGroup {
+        margin-bottom: 24px;
+        
+        label {
+            font-size: 16px;
+            margin-bottom: 6px;
+            display: block;
+        }
+        input{
+            width: 100%;
+        }
+    }
+}

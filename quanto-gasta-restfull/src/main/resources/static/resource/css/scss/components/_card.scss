@@ -1,0 +1,16 @@
+.card {
+    background-color: #fff;
+    position: absolute;
+    top: 2.3cm;
+    left: 2.5cm;
+    width: 91%;
+    min-height: 80vh;
+    transition: .2s ease-out;
+    padding-bottom: 2cm;
+}
+
+.card-title {
+    margin: .5cm;
+    color: #6E6E6E;
+    font-weight: 700;
+}

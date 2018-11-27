@@ -1,0 +1,80 @@
+$headerHeight: 60px;
+
+.top-header{
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $headerHeight;
+	background-color: #fff;
+	z-index: 2;
+	
+	&-logo{
+		margin: 0 0.2cm;
+		width: 1.5cm;	
+	}
+	
+	&-logo-name{
+		font-size: 32px;
+		color: #6E6E6E;
+		margin-right: 0.5cm;
+		z-index: 1;
+	}
+	
+	&-btn-hamburger{
+		font-size: 32px;
+		cursor: pointer;
+		color: #6E6E6E;
+	}
+}
+
+.sidebar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding-top: $headerHeight;
+	width: 5%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 1;
+	transition: 0.2s ease-out;
+	
+	&-btn{
+		display: inline-block;
+		color: #fff;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	
+	&-item {
+		color: #6E6E6E;
+		display: flex;
+		align-items: center;
+		padding: 18px 24px;
+		position: relative;
+		font-weight: 300;
+		cursor: pointer;
+		
+		&:hover, &.active {
+			background: #F2F2F2;			
+		}
+		
+		&-icon{
+			font-size: 20px;
+			width: 24px;
+			margin-right: 4px;
+			
+		}
+		
+		&-text{
+			display: none;
+			font-size: 16px;
+			font-weight: 300;
+		}	
+	}
+}
+
+// COM EFEITO
+// criar class de toggle dropdown 

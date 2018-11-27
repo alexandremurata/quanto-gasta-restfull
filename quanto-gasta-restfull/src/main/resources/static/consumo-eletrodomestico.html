@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../content/css/main.css">
+    <script src="../content/js/include.js"></script>
+    <title>Document</title>
+</head>
+<body>        
+    <div w3-include-html="menu.html"></div>
+    
+    <div class="eletrodomesticos">
+        <div id="cards" class="card">
+            <h2 class="card-title">Consumo Eletrodomésticos</h2>
+            <button id="btnModal" class="btn btn-add">add</button>
+            
+            <table class="table">
+                <tr>
+                    <th>id</th>
+                    <th>eletrodoméstico</th>
+                    <th>potência</th>
+                    <th>tempo uso diario</th>
+                    <th>quantidade</th>
+                    <th>consumo</th>
+                    <th>valor</th>
+                </tr>
+                
+                <tr>
+                    <td>001</td>
+                    <td>freezer horizontal 600 l</td>
+                    <td>750</td>
+                    <td>750</td>
+                    <td>750</td>
+                    <td>750</td>
+                    <td>750</td>
+                </tr>
+                
+                <tr>
+                    <td>012</td>
+                    <td>maquina de lava jato</td>
+                    <td>1700</td>
+                    <td>1700</td>
+                    <td>1700</td>
+                    <td>1700</td>
+                    <td>1700</td>
+                </tr>
+                
+                <tr>
+                    <td>001</td>
+                    <td>conjunto de som</td>
+                    <td>780</td>
+                    <td>780</td>
+                    <td>780</td>
+                    <td>780</td>
+                    <td>780</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="modal" id="modal">
+            <div class="modal-box">
+                <div class="modal-header">
+                    <h3 class="modal-header-title">
+                        Novo Consumo Eletrodoméstico
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <form class="modal-body-form">
+                        <span>Descrição</span> 
+                        <select>
+                            <optgroup>
+                                <option>freezer horizontal 600 l</option>
+                                <option>maquina de lava jato</option>
+                                <option>conjunto de som</option>
+                            </optgroup>
+                        </select>
+                        <span>Tempo Uso Diário</span> <input type="text" name="Nome" id="">
+                        <span>Quantidade</span> <input type="text" name="Nome" id="">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-cancelar">Cancelar</button>
+                    <button class="btn btn-success">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        includeHTML();
+    </script>
+    <script src="../content/js/menu.js"></script>
+    <script src="../content/js/openModal.js"></script>
+</body>
+</html>

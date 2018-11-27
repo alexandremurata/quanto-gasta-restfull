@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout">
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../content/css/main.css">
+    <script src="../content/js/include.js"></script>
+    <title>Document</title>
 </head>
-<body>
-	<h1 layout:fragment="header">Quanto Gasta App <small>Home</small></h1>
-	<div layout:fragment="content" class="container">
-	 <div class="jumbotron">
-		<a th:href="@{/eletrodomesticos/}" class="btn btn-lg btn-primary">Cadastro de Eletrodomesticos</a>
-		<a th:href="@{/usuarios/}" class="btn btn-lg btn-primary">Cadastro de Usuarios</a>
-		<a th:href="@{/tarifas/}" class="btn btn-lg btn-primary">Cadastro de Tarifas</a>
-		<a class="btn btn-lg btn-primary">Visualizar Contas</a>
-		<!--  <a th:href="@{/clientes/}" class="btn btn-lg btn-primary">Cadastro de clientes</a>
-		<a th:href="@{/itens/}" class="btn btn-lg btn-primary">Cadastro de itens</a>
-		<a th:href="@{/pedidos/}" class="btn btn-lg btn-primary">Cadastro de pedidos</a>-->
-	 </div>
-	</div>
+<body>        
+    <div w3-include-html="menu.html"></div>
+
+    <div id="cards" class="card">
+        
+    </div>
+    
+    
+    <script>
+        includeHTML();
+    </script>
+    <script src="../content/js/menu.js"></script>
 </body>
 </html>

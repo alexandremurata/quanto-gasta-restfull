@@ -1,0 +1,37 @@
+.btn {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #4285f4;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 6px 6px;
+    display: inline-block;
+    min-width: 80px;
+    cursor: pointer;
+    background-color: #FFF;
+    border-color: #d7d7d7;
+    
+    &-success {
+        color: #fff;
+        background-color: #42AE5D;
+        border-color: #42AE5D;
+    }
+
+    &-add {
+        color: #fff;
+        background-color: #42AE5D;
+        border-color: #42AE5D;
+        margin-left: 1cm;
+        margin-bottom: 0.5cm;
+    }
+
+    &-fechar-mes {
+        position: absolute;
+        right: 1cm;
+        margin-top: 20px;
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+}

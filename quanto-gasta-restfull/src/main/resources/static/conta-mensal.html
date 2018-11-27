@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../content/css/main.css">
+    <script src="../content/js/include.js"></script>
+    <title>Document</title>
+</head>
+<body>        
+    <div w3-include-html="menu.html"></div>
+    
+    <div class="eletrodomesticos">
+        <div id="cards" class="card">
+            <h2 class="card-title">Conta Mensal</h2>
+            
+            <table class="table">
+                <tr>
+                    <th>id</th>
+                    <th>mês</th>
+                    <th>consumo total</th>
+                    <th>valor total</th>
+                </tr>
+                
+                <tr>
+                    <td>001</td>
+                    <td>freezer horizontal 600 l</td>
+                    <td>750</td>
+                    <td>750</td>
+                </tr>
+                
+                <tr>
+                    <td>012</td>
+                    <td>maquina de lava jato</td>
+                    <td>1700</td>
+                    <td>1700</td>
+                </tr>
+                
+                <tr>
+                    <td>001</td>
+                    <td>conjunto de som</td>
+                    <td>780</td>
+                    <td>780</td>
+                </tr>
+            </table>
+            <button id="btnModal" class="btn btn-success btn-fechar-mes">fechar mês</button>
+        </div>
+    </div>
+    
+    
+    <script>
+        includeHTML();
+    </script>
+    <script src="../content/js/menu.js"></script>
+    <script src="../content/js/openModal.js"></script>
+</body>
+</html>
