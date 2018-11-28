@@ -17,7 +17,7 @@ public class ContaMensalController {
 
 	private ContaMensalService service = new ContaMensalService();
 	
-	@GetMapping("/")
+	@GetMapping
 	public List<ContaMensal> list() {
 		return service.findAll();
 	}
