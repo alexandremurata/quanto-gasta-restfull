@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 	<head>
 		<meta charset="UTF-8"></meta>
@@ -16,9 +16,10 @@
 	</head>
 
 	<body>
-		<div w3-include-html="menu.html"></div>
 
-	    <div id="cards" class="card">
+	<section class="content-header" th:replace="menu::menu"></section>
+
+	<div id="cards" class="card">
 	        
 	    </div>
     
