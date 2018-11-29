@@ -17,7 +17,7 @@ public class ConsumoEletroController {
 	
 	private ConsumoEletroService service = new ConsumoEletroService();
 
-	@GetMapping("/")
+	@GetMapping
 	public List<ConsumoEletro> list() {
 		return service.findAll();
 	}

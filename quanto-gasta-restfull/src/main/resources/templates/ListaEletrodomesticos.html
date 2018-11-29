@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../content/css/main.css">
     <script src="../content/js/include.js"></script>
-    <title>Document</title>
+    <title>Eletrodomésticos</title>
 </head>
 <body>        
     <div w3-include-html="menu.html"></div>
@@ -16,34 +16,30 @@
     <div class="eletrodomesticos">
         <div id="cards" class="card">
             <h2 class="card-title">Eletrodomésticos</h2>
-            <button id="btnModal" class="btn btn-add">add</button>
+            <!--  <button id="btnModal" class="btn btn-add">add</button>-->
             
             <table class="table">
-                <tr>
-                    <th>id</th>
-                    <th>descrição</th>
-                    <th>potência</th>
-                </tr>
+                <thead>
+                	<tr>
+	                    <th>id</th>
+	                    <th>descrição</th>
+	                    <th>potência</th>
+                	</tr>
+                </thead>
+                <tbody>
+                	<tr th:each="eletrodomestico : ${eletrodomesticos}">
+                		<td th:text="${eletrodomestico.id}"></td>
+                		<td th:text="${eletrodomestico.descricao}"></td>
+                		<td th:text="${eletrodomestico.potencia}"></td>
+                	</tr>
+                </tbody>
                 
-                <tr>
-                    <td>001</td>
-                    <td>freezer horizontal 600 l</td>
-                    <td>750</td>
-                </tr>
-                
-                <tr>
-                    <td>012</td>
-                    <td>maquina de lava jato</td>
-                    <td>1700</td>
-                </tr>
-                
-                <tr>
-                    <td>001</td>
-                    <td>conjunto de som</td>
-                    <td>780</td>
-                </tr>
             </table>
         </div>
+        
+        <div class="panel-footer">
+			<a class="btn btn-sm btn-success" th:href="@{/add/}" >Adicionar</a>
+		</div>
         
         <div class="modal" id="modal">
             <div class="modal-box">

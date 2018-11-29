@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../content/css/main.css">
     <script src="../content/js/include.js"></script>
-    <title>Document</title>
+    <title>Consumo Eletrodoméstico</title>
 </head>
 <body>        
     <div w3-include-html="menu.html"></div>
@@ -19,45 +19,30 @@
             <button id="btnModal" class="btn btn-add">add</button>
             
             <table class="table">
-                <tr>
-                    <th>id</th>
-                    <th>eletrodoméstico</th>
-                    <th>potência</th>
-                    <th>tempo uso diario</th>
-                    <th>quantidade</th>
-                    <th>consumo</th>
-                    <th>valor</th>
-                </tr>
+            	<thead>
+            		<tr>
+	                    <th>id</th>
+	                    <th>eletrodoméstico</th>
+	                    <th>potência</th>
+	                    <th>tempo uso diario</th>
+	                    <th>quantidade</th>
+	                    <th>consumo</th>
+	                    <th>valor</th>
+                	</tr>
+            	</thead>
+            	<tbody>
+            		<tr th:each="consumoEletro : ${consumoEletrodomestico}">
+            			<td th:text="${consumoEletro.id}"></td>
+            			<td th:text="${consumoEletro.eletrodomestico.nome}"></td>
+            			<td th:text="${consumoEletro.eletrodomestico.potencia}"></td>
+            			<td th:text="${consumoEletro.tempoUsoDiario}"></td>
+            			<td th:text="${consumoEletro.quantidade}"></td>
+            			<td th:text="${consumoEletro.consumo}"></td>
+            			<td th:text="${consumoEletro.valor}"></td>
+            		</tr>
+            	</tbody>
                 
-                <tr>
-                    <td>001</td>
-                    <td>freezer horizontal 600 l</td>
-                    <td>750</td>
-                    <td>750</td>
-                    <td>750</td>
-                    <td>750</td>
-                    <td>750</td>
-                </tr>
                 
-                <tr>
-                    <td>012</td>
-                    <td>maquina de lava jato</td>
-                    <td>1700</td>
-                    <td>1700</td>
-                    <td>1700</td>
-                    <td>1700</td>
-                    <td>1700</td>
-                </tr>
-                
-                <tr>
-                    <td>001</td>
-                    <td>conjunto de som</td>
-                    <td>780</td>
-                    <td>780</td>
-                    <td>780</td>
-                    <td>780</td>
-                    <td>780</td>
-                </tr>
             </table>
         </div>
         

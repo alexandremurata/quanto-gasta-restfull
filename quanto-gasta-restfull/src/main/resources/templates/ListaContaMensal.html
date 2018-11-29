@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../content/css/main.css">
     <script src="../content/js/include.js"></script>
-    <title>Document</title>
+    <title>Conta Mensal</title>
 </head>
 <body>        
     <div w3-include-html="menu.html"></div>
@@ -18,34 +18,24 @@
             <h2 class="card-title">Conta Mensal</h2>
             
             <table class="table">
-                <tr>
-                    <th>id</th>
-                    <th>mês</th>
-                    <th>consumo total</th>
-                    <th>valor total</th>
-                </tr>
-                
-                <tr>
-                    <td>001</td>
-                    <td>freezer horizontal 600 l</td>
-                    <td>750</td>
-                    <td>750</td>
-                </tr>
-                
-                <tr>
-                    <td>012</td>
-                    <td>maquina de lava jato</td>
-                    <td>1700</td>
-                    <td>1700</td>
-                </tr>
-                
-                <tr>
-                    <td>001</td>
-                    <td>conjunto de som</td>
-                    <td>780</td>
-                    <td>780</td>
-                </tr>
+            	<thead>
+            		<tr>
+	                    <th>id</th>
+	                    <th>mês</th>
+	                    <th>consumo total</th>
+	                    <th>valor total</th>
+                	</tr>
+            	</thead>
+                <tbody>
+                	<tr th:each="conta : ${contas}">
+                		<td th:text="${conta.id}"></td>
+                		<td th:text="${conta.mes}"></td>
+                		<td th:text="${conta.consumoTotal}"></td>
+                		<td th:text="${conta.valorTotal}"></td>
+                	</tr>
+                </tbody>
             </table>
+            
             <button id="btnModal" class="btn btn-success btn-fechar-mes">fechar mês</button>
         </div>
     </div>

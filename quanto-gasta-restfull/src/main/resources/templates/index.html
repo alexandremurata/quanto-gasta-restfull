@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
 
-	<head>
-		<meta charset="UTF-8"></meta>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-		<meta http-equiv="X-UA-Compatible" content="ie=edge"></meta>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet"></link>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+	<link href="./css/main.css" rel="stylesheet"></link>
+	
+	<script src="./js/include.js"></script>
 
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet"></link>
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-		<link href="./css/main.css" rel="stylesheet"></link>
-		
-		<script src="./js/include.js"></script>
+	<title>Quanto Gasta?</title>
+</head>
 
-		<title>Quanto Gasta?</title>
-	</head>
-
-	<body>
+<body>
 
 	<section class="content-header" th:replace="menu::menu"></section>
 
-	<div id="cards" class="card">
-	        
-	    </div>
-    
-    
-	    <script>
-	        includeHTML();
-	    </script>
-		<script src="./js/menu.js"></script>
-	</body>
+	<div id="cards" class="card"></div>
+
+	<script>
+		includeHTML();
+	</script>
+	<script src="./js/menu.js"></script>
 	
+</body>
 </html>
