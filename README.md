@@ -6,3 +6,8 @@
 ![consumo-eletrodomestico](https://user-images.githubusercontent.com/14209020/49318426-49512200-f4d7-11e8-9a47-81f6cb33525b.png)
 ![add-consumo-eletrodomestico](https://user-images.githubusercontent.com/14209020/49318464-684fb400-f4d7-11e8-903b-2d62f3ba8c94.png)
 ![conta](https://user-images.githubusercontent.com/14209020/49318493-80bfce80-f4d7-11e8-8abb-efce3b2ae676.png)
+
+
+
+#UML
+![uml](https://user-images.githubusercontent.com/14209020/49318617-fa57bc80-f4d7-11e8-82c4-c3e115c97afd.jpeg)
